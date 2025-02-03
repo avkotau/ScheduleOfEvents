@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
 import { useFavorites } from "../shared/hooks/useFavorites";
 import { useTranslation } from 'react-i18next';
-import { FavoriteIcon } from '../entities/event/FavoriteIcon';
+import { FavoriteIcon } from '../shared/components/FavoriteIcon';
 import { Event as EventType } from '../entities/event/types';
 import { observer } from "mobx-react-lite";
 import { eventStore } from "../store/eventStore";

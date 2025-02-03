@@ -7,6 +7,8 @@ export default {
     clear: "Очистить",
     addToFavorites: "Добавить в избранное",
     removeFromFavorites: "Удалить из избранного",
+    ok: "ОК",
+    cancel: "Отмена"
   },
   eventData: [
     { id: 1, date: "2025-02-15", title: "Митап React Native", description: "Встреча разработчиков." },

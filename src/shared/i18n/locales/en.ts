@@ -7,6 +7,8 @@ export default {
     clear: "Clear",
     addToFavorites: "Add to favorites",
     removeFromFavorites: "Remove from favorites",
+    ok: "OK",
+    cancel: "Cancel"
   },
   eventData: [
     { id: 1, date: "2025-02-15", title: "React Native Meetup", description: "Developers meetup." },

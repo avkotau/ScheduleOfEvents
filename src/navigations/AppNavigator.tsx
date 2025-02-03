@@ -69,9 +69,10 @@ export const AppNavigator = () => {
 const styles = StyleSheet.create({
     languageButton: {
         marginRight: vScale(15),
-        padding: vScale(10),
+        padding: vScale(8),
         backgroundColor: theme.background.secondary,
         borderRadius: 5,
+        marginBottom: vScale(5),
     },
     languageText: {
         color: theme.text.accent,

@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { View, FlatList, TextInput, StyleSheet, TouchableOpacity, Button, Platform } from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
+import { View, FlatList, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { EventCard } from '../entities/event/EventCard';
 import { NavigationType } from '../navigations/types';
@@ -8,9 +7,9 @@ import { useTranslation } from 'react-i18next';
 import { Event } from '../entities/event/types';
 import { observer } from "mobx-react-lite";
 import { eventStore } from "../store/eventStore";
-import {Typography} from "../shared/styles/typography";
 import {vScale} from "../shared/util/scale";
 import {theme} from "../shared/styles/theme";
+import { DatePickerCustom } from '../shared/components/DatePickerCustom';
 
 export const EventList = observer(() => {
     const { t } = useTranslation();
@@ -49,26 +48,15 @@ export const EventList = observer(() => {
                 onChangeText={setSearchQuery}
             />
 
-            <View style={styles.dateFilterContainer}>
-                <Button title={t("common.selectDate")} onPress={() => setShowDatePicker(true)} />
-                {selectedDate && (
-                    <Typography variant="proRegular" style={styles.selectedDateText}>
-                        {selectedDate.toLocaleDateString()}
-                    </Typography>
-                )}
-                {selectedDate && (
-                    <Button title={t("common.clear")} color="red" onPress={() => setSelectedDate(null)} />
-                )}
-            </View>
-
-            {showDatePicker && (
-                <DateTimePicker
-                    value={selectedDate || new Date()}
-                    mode="date"
-                    display={Platform.OS === 'ios' ? 'spinner' : 'default'}
-                    onChange={onDateChange}
-                />
-            )}
+            <DatePickerCustom
+                selectedDate={selectedDate}
+                showDatePicker={showDatePicker}
+                setShowDatePicker={setShowDatePicker}
+                setSelectedDate={setSelectedDate}
+                onDateChange={onDateChange}
+                selectDateText={t("common.selectDate")}
+                clearText={t("common.clear")}
+            />
 
             <FlatList
                 data={filteredEvents}
