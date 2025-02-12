@@ -1,14 +1,14 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { EventList } from '../../pages/EventList';
-import { EventDetailsScreen } from '../../pages/EventDetailsScreen';
+import { EventList } from '../pages/EventList';
+import { EventDetailsScreen } from '../pages/EventDetailsScreen';
 import {TouchableOpacity, StyleSheet, Alert} from 'react-native';
 import { useTranslation } from 'react-i18next';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useEffect, useState } from "react";
-import { Typography } from '../../shared/styles/typography';
-import {vScale} from "../../shared/util/scale";
-import {theme} from "../../shared/styles/theme";
+import { Typography } from '../shared/styles/typography';
+import {vScale} from "../shared/util/scale";
+import {theme} from "../shared/styles/theme";
 
 const Stack = createStackNavigator();
 

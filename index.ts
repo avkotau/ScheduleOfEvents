@@ -1,6 +1,6 @@
 import { registerRootComponent } from 'expo';
 
-import App from './src/app/App';
+import App from './app/App';
 import './src/shared/i18n/i18n'
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);

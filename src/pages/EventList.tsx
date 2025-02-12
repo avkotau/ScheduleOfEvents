@@ -3,11 +3,11 @@ import { View, FlatList, TextInput, StyleSheet, TouchableOpacity, Button, Platfo
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { useNavigation } from '@react-navigation/native';
 import { EventCard } from '../entities/event/EventCard';
-import { NavigationType } from '../app/navigations/types';
+import { NavigationType } from '../navigations/types';
 import { useTranslation } from 'react-i18next';
 import { Event } from '../entities/event/types';
 import { observer } from "mobx-react-lite";
-import { eventStore } from "../app/store/eventStore";
+import { eventStore } from "../store/eventStore";
 import {Typography} from "../shared/styles/typography";
 import {vScale} from "../shared/util/scale";
 import {theme} from "../shared/styles/theme";
